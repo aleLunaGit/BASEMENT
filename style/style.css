@@ -1,0 +1,466 @@
+@font-face {
+    font-family: Marleigh;
+    src: url(../BASEMENT/Fuentetipog/Marleigh.ttf);
+    font-weight: bold;
+}
+
+/*ESTABLECIENDO FUENTE */
+
+* {
+    /*VALORES UNIVERSALES*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Marleigh";
+}
+
+html {
+    /* FONDO+ALTURA */
+    height: 100%;
+    background-image: url(../BASEMENT/grunge-wall-texture.jpg);
+}
+
+.body-container {
+    /*CONTENEDOR GRID*/
+    display: grid;
+    min-height: 100%;
+    gap: 10px;
+    grid-template-areas:
+        "header"
+        "nav"
+        "section1"
+        "section2"
+        "aside"
+        "footer"
+    ;
+    grid-template-rows: 100px 50px 500px 500px auto auto;
+}
+
+/* HEADER LOGO*/
+
+.header {
+    grid-area: header;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.logo img {
+    width: 150px;
+    height: 100px;
+}
+
+.logodesktop {
+    display: none;
+}
+
+/* NAV */
+
+
+.nav {
+    background-color: #489E4B;
+    grid-area: nav;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+.nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 50px;
+    align-content: center;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav ul li a {
+    text-decoration: none;
+}
+
+
+/* INDEX SECCION INDOOR*/
+
+
+.sectionindoor {
+    grid-area: section1;
+    margin: 0px 25%;
+    background-image: url(../BASEMENT/Ilustraciones/fuego-11.png);
+    background-color: #489E4B;
+    background-size: 130%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px #F8FF00 solid;
+}
+
+.indoor{
+    text-decoration: none;
+    text-align: center;
+}
+
+.indoor h2 {
+    padding-top: 75px;
+}
+
+
+/* INDEX SECCION VESTUARIO*/
+
+.sectionclot {
+    grid-area: section2;
+    margin: 0px 25%;
+    background-image: url(../BASEMENT/Ilustraciones/remera-09.png);
+    background-color: #489E4B;
+    background-size: 130%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px #F8FF00 solid;
+}
+
+.clot {
+    text-decoration: none;
+    text-align: center;
+}
+
+.clot h2 {
+    padding-top: 75px;
+}
+
+/* INDEX ASIDE */
+
+.aside {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: rgba(173, 24, 24, 0.65);
+    grid-area: aside;
+    margin: 0px 100px;
+}
+
+.oferta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    color: #489E4B;
+    text-shadow: 5px 5px 3px #F8FF00;
+    height: 100px;
+}
+
+.productos {
+    display: flex;
+    flex-flow: column;
+    line-height: 90px;
+}
+
+
+.productos__catalogo {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.productos h3 {
+    text-align: center;
+}
+
+.productos__catalogo img {
+    width: 100px;
+    height: 100px;
+}
+
+.productos__catalogo p {
+    font-size: 45px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: black;
+    grid-area: footer;
+    color: #F8FF00;
+}
+
+.fotitem {
+    line-height: 30px;
+}
+
+
+/* DE MOBILE L A TABLET Y LAPTOP */
+
+
+@media screen and (min-width: 426px) {
+
+    .body-container {
+        display: grid;
+        min-height: 100%;
+        gap: 10px;
+        /* grid-template-columns: 3fr 3fr 3fr 3fr; */
+        grid-template-rows: auto auto auto auto auto;
+        grid-template:
+            "header header header header"
+            "nav nav nav nav"
+            "section1 section1 section2 section2"
+            "aside aside aside aside"
+            "footer footer footer footer"
+        ;
+    }
+
+    .sectionindoor {
+        height: 500px;
+        grid-area: section1;
+        /* margin: 0px 100px; */
+        background-image: url(../BASEMENT/Ilustraciones/fuego-11.png);
+        background-color: #489E4B;
+        background-size: 130%;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 3px #F8FF00 solid;
+    }
+
+    .sectionclot {
+        height: 500px;
+        grid-area: section2;
+        /* margin: 0px 100px; */
+        background-image: url(../BASEMENT/Ilustraciones/remera-09.png);
+        background-color: #489E4B;
+        background-size: 130%;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 3px #F8FF00 solid;
+    }
+
+    .aside {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        background-color: #489E4B;
+        grid-area: aside;
+        margin: 0px 100px;
+    }
+
+
+    .oferta {
+        color: black;
+        font-size: 100px;
+    }
+
+    .productos{
+        flex-flow: row wrap;
+    }
+
+    .productos__catalogo img {
+        margin: 12px;
+        width: 300px;
+        height: 300px;
+        border: 3px #F8FF00 solid;
+    }
+
+    .productos__catalogo p {
+        font-size: 50px;
+    }
+
+    .productos__catalogo input {
+        /* width: 80px;
+        height: 30px; */
+        margin: 5px;
+        font-size: 20px;
+    }
+
+}
+
+/* DE TABLET A DESKTOP */
+
+@media (min-width: 1025px) {
+    .body-container {
+        display: grid;
+        min-height: 100%;
+        gap: 0px;
+        row-gap: 10px;
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template:
+            "header header nav nav"
+            "section1 section1 section2 section2"
+            "aside aside aside aside"
+            "footer footer footer footer"
+        ;
+    }
+
+    .logo {
+        display: none;
+        position: relative;
+        justify-content: flex-start;
+        padding: 5px;
+    }
+
+    .logodesktop {
+        display: flex;
+        position: relative;
+        padding: 10px;
+    }
+
+    .logodesktop img {
+        width: 150px;
+        height: 100px;
+    }
+
+    .nav {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-evenly;
+        align-items: center;
+        grid-column: 1 / 5;
+        padding-left: 600px;
+    }
+
+    .nav ul {
+        display: flex;
+        width: 100%;
+    }
+
+    .nav ul li a {
+        font-size: 30px;
+    }
+
+    .sectionindoor {
+        height: 700px;
+    }
+
+    .sectionclot {
+        height: auto;
+        /*va auto pq el section que esta antes (.sectionindoor) ya establece el alto*/
+    }
+
+
+    .productos {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .productos h1 {
+        display: flex;
+        background-color: #489E4B;
+        /* border: #F8FF00 2px solid; */
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+    }
+
+    .productos__catalogo {
+        background: #489E4B;
+        border: 1px #F8FF00 solid;
+    }
+
+    .productos__catalogo img {
+        margin: 12px;
+        width: 300px;
+        height: 300px;
+        border: 3px #F8FF00 solid;
+    }
+
+    .productos__catalogo p {
+        font-size: 25px;
+    }
+
+    .productos__catalogo input {
+        /* width: 80px;
+            height: 30px; */
+        margin: 5px;
+        font-size: 20px;
+    }
+}
+
+/* UBICANOS HTML */
+
+.bodyubicanos-container {
+    display: grid;
+    min-height: 100%;
+    gap: 10px;
+    grid-template-areas:
+        "header"
+        "nav"
+        "asideubi"
+        "secubi"
+        "footer"
+    ;
+    grid-template-rows: 100px 50px 500px auto auto;
+}
+
+.aside-ubicanos {
+    grid-area: asideubi;
+}
+
+.loca iframe {
+    width: 100%;
+}
+
+.loca h2 {
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    /* margin-right: 84%; */
+    background-color: #489E4B;
+    font-size: 32px;
+    border: #F8FF00 2px solid;
+    border-radius: 40px;
+    padding: 5px 0px 0px 5px;
+}
+
+.howtotitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: #489E4B;
+    text-shadow: 5px 5px 5px #F8FF00;
+    margin: 50px;
+    height: auto;
+}
+
+.howto {
+    display: flex;
+    width: 100%;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+    background: #489E4B;
+    border: black 3px solid;
+    border-radius: 30px;
+    /* margin-right: 60%; */
+}
+
+.howto ol {
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.secubicanos {
+    grid-area: secubi;
+}
+
+/* UNICAMENTE CAMBIA CUANDO SE VISUALIZA EN DESKTOP */
+
+@media (min-width: 1025px) {
+    .bodyubicanos-container {
+        grid-template:
+            "header header nav nav"
+            "asideubi asideubi . ."
+            ". . secubi secubi"
+            "footer footer footer footer"
+        ;
+        gap: 0px;
+    }
+
+    /* 
+    .secubicanos{
+        display: flex;
+        flex-flow: column;
+    } */
+}

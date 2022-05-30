@@ -1,0 +1,172 @@
+@font-face {
+    font-family: "Marleigh";
+    src: url(../BASEMENT/Fuentetipog/Marleigh.ttf);
+}
+
+*{
+    font-family: "Marleigh";
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+html{
+    background-image: url(../BASEMENT/grunge-wall-texture.jpg);
+    height: 100%;
+}
+
+.body-container{
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 40px repeat(14, 200px);
+}
+
+.header{
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    width: 220px;
+    height: 150px;
+}
+
+.logodesktop{
+    display: none;
+}
+
+.nav{
+    display: flex;
+    background-color: #489E4B;
+    border: 2px solid black;
+    border-radius: 30px;
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    /* margin-bottom: 11%; */
+}
+
+.nav ul{
+    display: flex;
+    flex-flow: row;
+    width: 100%; 
+    justify-content: space-between;
+    list-style: none;
+    padding: 10px;
+}
+
+.nav ul li a{
+    text-decoration: none;
+}
+
+.sectionindoor{
+    grid-column: 2 / 3;
+    grid-row: 3 / 6;
+    background-image: url(../BASEMENT/Ilustraciones/fuego-11.png);
+    background-color: #489E4B;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px #F8FF00 solid;
+    margin: 10px 15% 0 15%;
+}
+
+.indoor{
+    text-decoration: none;
+    text-align: center;
+}
+
+.indoor h2 {
+    padding-top: 75px;
+    font-size: 45px;
+}
+
+.sectionclot{
+    grid-column: 2 / 3;
+    grid-row: 6 / 9;
+    margin: 10px 15% 10px 15%;
+    background-image: url(../BASEMENT/Ilustraciones/remera-09.png);
+    background-color: #489E4B;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px #F8FF00 solid;
+
+}
+
+.clot{
+    text-decoration: none;
+    text-align: center;
+}
+
+.clot h2 {
+    padding-top: 75px;
+    font-size: 45px;
+}
+
+.aside{
+    grid-column: 2 / 3;
+    grid-row: 9 / 16;
+    align-items: center;
+    background-color: rgba(173, 24, 24, 0.65);
+    margin: 0px 15%;
+}
+
+.oferta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #489E4B;
+    text-shadow: 5px 5px 3px #F8FF00;
+    height: 100px;
+}
+
+.productos {
+    display: flex;
+    flex-flow: column;
+    line-height: 90px;
+}
+
+
+.productos__catalogo {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.productos h2 {
+    text-align: center;
+}
+
+.productos__catalogo img {
+    width: 100px;
+    height: 100px;
+}
+
+.productos__catalogo p {
+    font-size: 45px;
+}
+
+.footer{
+    grid-column: 1 / 4 ;
+    grid-row: 16 / auto;
+    background-color: black;
+    color: #F8FF00;
+}
+
+.fotitem {
+    display: flex;
+    flex-flow: column;
+    font-size: 35px;
+    line-height: 50px;
+    height: 100%;
+}
+
+.fotitem ul {
+    list-style: none;
+}
