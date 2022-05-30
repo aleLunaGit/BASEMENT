@@ -65,14 +65,14 @@ html{
 
 .sectionindoor{
     grid-column: 2 / 3;
-    grid-row: 3 / 6;
+    grid-row: 3 / 5;
     background-image: url(../BASEMENT/Ilustraciones/fuego-11.png);
     background-color: #489E4B;
-    background-size: cover;
+    background-size: 120%;
     background-position: center;
     background-repeat: no-repeat;
     border: 3px #F8FF00 solid;
-    margin: 10px 15% 0 15%;
+    margin: 10px 0 10px 0;
 }
 
 .indoor{
@@ -82,16 +82,16 @@ html{
 
 .indoor h2 {
     padding-top: 75px;
-    font-size: 45px;
+    font-size: 25px;
 }
 
 .sectionclot{
     grid-column: 2 / 3;
-    grid-row: 6 / 9;
-    margin: 10px 15% 10px 15%;
+    grid-row: 5 / 7;
+    margin: 10px 0 10px 0;
     background-image: url(../BASEMENT/Ilustraciones/remera-09.png);
     background-color: #489E4B;
-    background-size: cover;
+    background-size: 140%;
     background-position: center;
     background-repeat: no-repeat;
     border: 3px #F8FF00 solid;
@@ -105,15 +105,15 @@ html{
 
 .clot h2 {
     padding-top: 75px;
-    font-size: 45px;
+    font-size: 25px;
 }
 
 .aside{
     grid-column: 2 / 3;
-    grid-row: 9 / 16;
+    grid-row: 7 / 15;
     align-items: center;
     background-color: rgba(173, 24, 24, 0.65);
-    margin: 0px 15%;
+    /* margin: 0 0 75% 0; */
 }
 
 .oferta {
@@ -162,11 +162,13 @@ html{
 .fotitem {
     display: flex;
     flex-flow: column;
-    font-size: 35px;
+    font-size: 20px;
     line-height: 50px;
     height: 100%;
+    padding: 0;
 }
 
 .fotitem ul {
     list-style: none;
+    padding: 0;
 }
